@@ -20,16 +20,16 @@ $size-15: 120px;
 
 //Corner
 $corner-extra-small: 4px;
-$corner-medium: 8px;
-$corner-small: 12px;
+$corner-small: 8px;
+$corner-medium: 12px;
 $corner-large: 16px;
 $corner-extra-large: 24px;
 $corner-full: 9999px;
 
 //Button
-$btn-large: 24px 16px;
-$btn-medium: 20px 10px;
-$btn-small: 16px 8px;
+$btn-large: 16px 24px;
+$btn-medium: 10px (20px - 2px);
+$btn-small: 8px (16px - 2px);
 $btn-icon: 8px;
 
 //Shadow

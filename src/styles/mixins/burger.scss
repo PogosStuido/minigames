@@ -1,0 +1,27 @@
+﻿@use '../../styles/tokens/color-tokens' as *;
+@use '../../styles/tokens/size-tokens' as *;
+@use '../../styles/tokens/font-tokens' as *;
+
+@mixin burger {
+  padding: $btn-icon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  width: $size-4;
+  height: $size-4;
+  border: 2px solid $on-primary;
+  border-radius: $corner-small;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  span {
+    width: $size-2;
+    height: 2px;
+    background-color: $on-primary;
+  }
+
+  &:hover {
+    background-color: $surface;
+  }
+}
