@@ -1,0 +1,83 @@
+﻿@use '../../styles/tokens/color-tokens' as *;
+@use '../../styles/tokens/size-tokens' as *;
+@use '../../styles/tokens/font-tokens' as *;
+@use '../../styles/mixins/header-logo' as *;
+@use '../../styles/mixins/buttons' as *;
+@use '../../styles/mixins/burger' as *;
+
+.header {
+  padding: 27.5px 80px;
+  max-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $black;
+  //border-style: ;
+
+  &__logo {
+    @include header-logo;
+  }
+
+  &__right-elements {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $on-bg;
+    font-weight: $medium;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      font-weight: bold;
+      color: $on-primary;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+  }
+  &__login {
+    @include login;
+  }
+
+  &__register {
+    @include register;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 20px 40px;
+    max-height: 72px;
+    &__nav {
+      display: none;
+    }
+    .burger {
+      @include burger;
+      display: flex;
+    }
+    &__right-elements {
+      gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    padding: 16px;
+    max-height: 64px;
+  }
+}
