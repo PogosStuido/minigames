@@ -1,6 +1,6 @@
-﻿@use '../../styles/tokens/color-tokens' as *;
-@use '../../styles/tokens/size-tokens' as *;
-@use '../../styles/tokens/font-tokens' as *;
+﻿@use '../tokens/color-tokens' as *;
+@use '../tokens/size-tokens' as *;
+@use '../tokens/font-tokens' as *;
 
 @mixin burger {
   padding: $btn-icon;
