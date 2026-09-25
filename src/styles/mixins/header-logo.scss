@@ -1,0 +1,22 @@
+﻿@use '../../styles/tokens/color-tokens' as *;
+@use '../../styles/tokens/size-tokens' as *;
+@use '../../styles/tokens/font-tokens' as *;
+
+@mixin header-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: $inter;
+  font-size: $headline-medium;
+  font-weight: $bold;
+
+  &::before {
+    content: url('../../assets/icon/logo.svg');
+    width: 32px;
+    height: 32px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: $headline-small;
+  }
+}

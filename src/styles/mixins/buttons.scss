@@ -1,0 +1,46 @@
+﻿@use '../../styles/tokens/color-tokens' as *;
+@use '../../styles/tokens/size-tokens' as *;
+@use '../../styles/tokens/font-tokens' as *;
+
+@mixin buttons {
+  padding: $btn-medium;
+  max-height: 37px;
+  font-family: $inter;
+  font-size: $label-large;
+  font-weight: $bold;
+  color: $on-primary;
+  border: 2px solid $black;
+  border-radius: $size-1;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    padding: $btn-small;
+    max-height: 33px;
+  }
+}
+
+@mixin login {
+  @include buttons;
+  background-color: $white;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: $surface;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+@mixin register {
+  @include buttons;
+  background-color: $primary;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: $primary-high;
+  }
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
