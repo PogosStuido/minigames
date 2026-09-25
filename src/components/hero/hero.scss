@@ -7,12 +7,12 @@
   padding: 112px 0;
   background-image: url('../../assets/img/hero-background.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   &__wrapper {
     padding: 48px;
     max-width: 640px;
-    max-height: 403px;
+    //max-height: 403px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -38,6 +38,10 @@
     line-height: 150%;
     letter-spacing: $text-spacing;
     color: $on-bg;
+
+    &_hide {
+      display: none;
+    }
   }
 
   &__button {
@@ -55,12 +59,13 @@
     &__wrapper {
       padding: 24px;
       max-width: 480px;
-      max-height: 239px;
+      //max-height: 239px;
       gap: 16px;
       border: 2.5px solid $on-primary;
       box-shadow: $level-2;
       border-radius: $corner-large;
     }
+
     &__title_h1 {
       font-size: $display-medium;
       line-height: 115%;
@@ -72,7 +77,36 @@
       font-weight: $medium;
       line-height: 140%;
       letter-spacing: $text-spacing - 0.1px;
-      color: $on-bg;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    padding: 64px 0;
+    background-position: center center;
+    background-size: cover;
+
+    &__wrapper {
+      gap: 16px;
+      border: 2.5px solid $on-primary;
+      box-shadow: $level-2;
+      border-radius: $corner-large;
+    }
+
+    &__title_h1 {
+      font-size: $display-small;
+      line-height: 120%;
+    }
+
+    &__text {
+      display: none;
+      font-size: $body-extra-small;
+      letter-spacing: $text-spacing - 0.1px;
+
+      &_hide {
+        display: block;
+      }
     }
   }
 }

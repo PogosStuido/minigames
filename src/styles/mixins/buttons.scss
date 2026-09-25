@@ -56,4 +56,14 @@
     font-size: $body-small;
     max-height: 37px;
   }
+
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: $btn-small;
+    font-size: $body-extra-small;
+    max-height: 37px;
+  }
 }

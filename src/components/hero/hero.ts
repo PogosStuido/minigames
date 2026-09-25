@@ -11,6 +11,7 @@ export function renderHero(): HTMLElement {
           Discover hundreds of curated casual mini-games. Play instantly in your
           browser — puzzle, match 3, farm, and board classics.
         </p>
+        <p class="hero__text hero__text_hide">Discover hundreds of curated casual mini-games right in your browser.</p>
         <button class="hero__button" type="button">Browse Library</button>
       </div>
     </div>
