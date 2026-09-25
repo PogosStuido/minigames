@@ -50,4 +50,10 @@
   padding: $btn-large;
   max-height: 54px;
   font-size: $body-large;
+
+  @media screen and (max-width: 768px) {
+    padding: $btn-medium;
+    font-size: $body-small;
+    max-height: 37px;
+  }
 }

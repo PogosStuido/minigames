@@ -7,6 +7,7 @@
   padding: 112px 0;
   background-image: url('../../assets/img/hero-background.png');
   background-repeat: no-repeat;
+  background-size: contain;
 
   &__wrapper {
     padding: 48px;
@@ -31,14 +32,47 @@
   }
 
   &__text {
+    //max-width: 500px;
     font-size: $body-large;
     font-weight: $medium;
     line-height: 150%;
+    letter-spacing: $text-spacing;
     color: $on-bg;
   }
 
   &__button {
     @include hero-button;
     flex: 1 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 72px 0;
+    background-position: center center;
+    background-size: cover;
+
+    &__wrapper {
+      padding: 24px;
+      max-width: 480px;
+      max-height: 239px;
+      gap: 16px;
+      border: 2.5px solid $on-primary;
+      box-shadow: $level-2;
+      border-radius: $corner-large;
+    }
+    &__title_h1 {
+      font-size: $display-medium;
+      line-height: 115%;
+    }
+
+    &__text {
+      //max-width: 500px;
+      font-size: $body-small;
+      font-weight: $medium;
+      line-height: 140%;
+      letter-spacing: $text-spacing - 0.1px;
+      color: $on-bg;
+    }
   }
 }
